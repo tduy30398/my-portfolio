@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-target-blank */
 import { useEffect, useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/img/logo.svg';
@@ -7,12 +7,12 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
 function NavBar() {
-    const [activeLink, setActiveLink] = useState('home');
+    const [isActive, setIsActive] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -25,10 +25,10 @@ function NavBar() {
     });
 
     return (
-        <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
+        <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
             <Container>
                 <Navbar.Brand href="#home">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="Logo" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
@@ -37,35 +37,42 @@ function NavBar() {
                     <Nav className="me-auto">
                         <Nav.Link
                             href="#home"
-                            className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => setActiveLink('home')}
+                            className={isActive === 'home' ? 'active' : ''}
+                            onClick={() => setIsActive('home')}
                         >
                             Home
                         </Nav.Link>
                         <Nav.Link
                             href="#skills"
-                            className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => setActiveLink('skills')}
+                            className={isActive === 'skills' ? 'active' : ''}
+                            onClick={() => setIsActive('skills')}
                         >
                             Skills
                         </Nav.Link>
                         <Nav.Link
                             href="#projects"
-                            className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => setActiveLink('projects')}
+                            className={isActive === 'projects' ? 'active' : ''}
+                            onClick={() => setIsActive('projects')}
                         >
                             Projects
                         </Nav.Link>
+                        <Nav.Link
+                            href="#contact"
+                            className={isActive === 'contact' ? 'active' : ''}
+                            onClick={() => setIsActive('contact')}
+                        >
+                            Contact
+                        </Nav.Link>
                     </Nav>
                     <span className="navbar-text">
-                        <div className="social-icon">
-                            <a href="#">
+                        <div className="social-icons">
+                            <a href="https://github.com/tduy30398" target="_blank">
                                 <img src={navIcon1} alt="" />
                             </a>
-                            <a href="#">
+                            <a href="https://www.facebook.com/tduyhcmus" target="_blank">
                                 <img src={navIcon2} alt="" />
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/tduy99us/" target="_blank">
                                 <img src={navIcon3} alt="" />
                             </a>
                         </div>
