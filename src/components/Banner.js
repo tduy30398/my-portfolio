@@ -16,10 +16,14 @@ function Banner() {
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>Hi! I'm Duy, ReactJs Developer</h1>
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen
-                                        book.
+                                        Welcome to my homepage! My full name is Lam Thanh Duy, and I'm a front-end
+                                        developer. Currently, I've worked at TMA solutions from March-2022. Before that,
+                                        I graduated from the Department of Information Technology - Electronic and
+                                        Telecommunications, Vietnam National University Ho Chi Minh City, University of
+                                        Science.
+                                        <br />
+                                        <br />
+                                        Email: tduy30399@gmail.com
                                     </p>
                                     <button>
                                         Let's connect <ArrowRightCircle size={25} />
