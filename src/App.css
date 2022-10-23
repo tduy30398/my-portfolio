@@ -260,6 +260,7 @@ nav.navbar .navbar-toggler-icon:after {
 }
 
 .banner p {
+    text-align: center;
     color: #b8b8b8;
     font-size: 1.8rem;
     letter-spacing: 0.8px;
